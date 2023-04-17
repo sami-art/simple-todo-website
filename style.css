@@ -1,0 +1,50 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 50px;
+}
+
+#todoInput {
+  width: 50%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+#addBtn {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+}
+
+#addBtn:hover {
+  background-color: #3E8E41;
+  cursor: pointer;
+}
+
+li {
+  list-style-type: none;
+  margin-bottom: 5px;
+}
+
+.todoText {
+  display: inline-block;
+  width: 75%;
+}
+
+.deleteBtn {
+  display: inline-block;
+  width: 15%;
+  padding: 5px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+}
+
+.deleteBtn:hover {
+  background-color: #d32f2f;
+  cursor: pointer;
+}

@@ -1,7 +1,18 @@
-FROM nginx:latest
+FROM amazonlinux:2
 
-COPY index.html /usr/share/nginx/html/index.html
-COPY style.css /usr/share/nginx/html/style.css
-COPY behaviour.js /usr/share/nginx/html/behaviour.js
+# Install packages
+RUN yum update -y && \
+    yum install -y httpd && \
+    rm -rf /var/cache/yum/*
 
+# Copy web files to the container
+COPY index.html /var/www/html/index.html
+COPY style.css /var/www/html/style.css
+COPY behavior.js /var/www/html/behavior.js
+
+# Expose port 80
 EXPOSE 80
+
+# Start Apache web server
+CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
+

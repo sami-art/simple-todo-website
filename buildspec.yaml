@@ -14,8 +14,8 @@ phases:
       - yum install jq -y
       - ContainerName="php-web"
       - ImageURI=$(cat imageDetail.json | jq -r '.ImageURI')
-      - printf '[{"name":"wordpress","imageUri":"210953236598.dkr.ecr.us-west-2.amazonaws.com/sui-crud-web:latest"}]' > imagedefinition.json
-      - sed -i -e "s|CONTAINER_NAME|wordpress|g" imagedefinition.json
+      - printf '[{"name":"webapp","imageUri":"210953236598.dkr.ecr.us-west-2.amazonaws.com/sui-crud-web:latest"}]' > imagedefinition.json
+      - sed -i -e "s|CONTAINER_NAME|webapp|g" imagedefinition.json
       - sed -i -e "s|IMAGE_URI|210953236598.dkr.ecr.us-west-2.amazonaws.com/sui-crud-web:latest|g" imagedefinition.json
       - cat imagedefinition.json
 artifacts:

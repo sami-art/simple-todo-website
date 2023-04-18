@@ -8,7 +8,7 @@ RUN yum update -y && \
 # Copy web files to the container
 COPY index.html /var/www/html/index.html
 COPY style.css /var/www/html/style.css
-COPY behavior.js /var/www/html/behavior.js
+COPY behaviour.js /var/www/html/behaviour.js
 
 # Expose port 80
 EXPOSE 80
